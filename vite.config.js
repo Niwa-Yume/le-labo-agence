@@ -16,7 +16,7 @@ export default defineConfig({
                 portfolio: resolve(__dirname, 'portfolio/index.html'),
                 propos: resolve(__dirname, 'propos/index.html'),
                 services: resolve(__dirname, 'service-agence/index.html'),
-                site: resolve(__dirname, 'site-web/index.html'),
+                site: resolve(__dirname, 'siteweb-app/index.html'),
             }
         }
     },
