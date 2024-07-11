@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Le Labo Design - Développement Web & Mobile</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #f4f1e8;
+            color: #2c2c2c;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: normal;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: #2c2c2c;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #9b8578;
+        }
+
+        .subtitle {
+            font-style: italic;
+            color: #666;
+        }
+
+        .service-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .service {
+            width: 48%;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #2c2c2c;
+            color: #f4f1e8;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #4a4a4a;
+        }
+
+        .process {
+            margin-top: 60px;
+        }
+
+        .process-step {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .step-number {
+            font-size: 2em;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .features {
+            margin-top: 60px;
+        }
+
+        .feature {
+            margin-bottom: 30px;
+        }
+
+        .contact-cta {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .contact-cta .cta-button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>LE LABO DESIGN</h1>
+            <p>Conception d'expériences numériques</p>
+            <nav>
+                <a href="../index.html">Accueil</a>
+                <a href="../service-agence/index.html">Services</a>
+                <a href="../portfolio/index.html">À Propos</a>
+                <a href="../contact/index.html">Contact</a>
+                <a href="../portfolio/index.html">Portfolio</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="service-intro">
+                <p>
+                    Tout comme un maître parfumeur sélectionne et mélange soigneusement les essences pour créer un parfum unique, nos développeurs façonnent méticuleusement le code pour créer des sites web et des applications mobiles sur mesure. Chaque création numérique est un mélange harmonieux d'esthétique, de fonctionnalité et d'expérience utilisateur.
+                </p>
+            </div>
+
+            <div class="services">
+                <div class="service">
+                    <h2>Développement de Sites Web sur Mesure</h2>
+                    <p class="price">À partir de 8 000€</p>
+                    <p class="description">
+                        Nous créons des sites web sur mesure qui incarnent l'essence de votre marque. Comme un parfum signature, votre site web laissera une impression durable sur les visiteurs, les engageant par son design unique et sa fonctionnalité fluide.
+                    </p>
+                    <a href="https://lelabodesign.com/consultation/web-development" class="cta-button">Discutez de Votre Site Web</a>
+                </div>
+                <div class="service">
+                    <h2>Applications Mobiles Sur Mesure</h2>
+                    <p class="price">À partir de 15 000€</p>
+                    <p class="description">
+                        Nos applications mobiles sont créées avec la précision d'un parfumeur concoctant une fragrance complexe. Nous combinons la technologie de pointe avec un design intuitif pour créer des applications qui résonnent avec vos utilisateurs et incarnent votre marque.
+                    </p>
+                    <a href="https://lelabodesign.com/consultation/mobile-development" class="cta-button">Imaginez Votre Application</a>
+                </div>
+            </div>
+
+            <div class="process">
+                <h2>Notre Processus de Développement</h2>
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-description">
+                        <h3>Découverte & Conceptualisation</h3>
+                        <p>Nous commençons par comprendre l'essence de votre marque, vos objectifs et votre public cible. Cette phase est comparable à la sélection des notes clés pour un parfum.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-description">
+                        <h3>Design & Prototypage</h3>
+                        <p>Nous créons des maquettes et des prototypes interactifs, vous permettant de vivre le parcours utilisateur. Cela ressemble à la création de la formule initiale d'un parfum.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-description">
+                        <h3>Développement & Test</h3>
+                        <p>Nos développeurs rédigent un code propre et efficace tandis que notre équipe QA s'assure de la fonctionnalité impeccable. Ce processus méticuleux reflète le mélange et le raffinement soigneux d'un parfum.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-description">
+                        <h3>Lancement & Optimisation</h3>
+                        <p>Nous déployons soigneusement votre produit numérique et assurons un support et une optimisation continus, tout comme un parfum est continuellement testé et ajusté avant sa sortie finale.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features">
+                <h2>Nos Éléments Signatures</h2>
+                <div class="feature">
+                    <h3>Design Réactif</h3>
+                    <p>Tout comme un parfum qui s'adapte à la chimie individuelle de la peau, nos sites web et applications s'ajustent parfaitement à tout appareil ou taille d'écran.</p>
+                </div>
+                <div class="feature">
+                    <h3>Optimisation des Performances</h3>
+                    <p>Nous affinons chaque aspect de votre produit numérique pour garantir des temps de chargement rapides et des interactions fluides, semblable à l'équilibrage d'un parfum pour une longévité et une diffusion optimales.</p>
+                </div>
+                <div class="feature">
+                    <h3>Architecture Evolutive</h3>
+                    <p>Nos solutions sont conçues pour évoluer avec votre entreprise, tout comme la composition d'un parfum permet des variations et des extensions du parfum original.</p>
+                </div>
+                <div class="feature">
+                    <h3>Sécurité par Conception</h3>
+                    <p>Nous mettons en œuvre des mesures de sécurité robustes tout au long du processus de développement, garantissant que votre présence numérique est aussi bien protégée que la formule d'un parfum jalousement gardée.</p>
+                </div>
+            </div>
+
+            <div class="contact-cta">
+                <a href="https://lelabodesign.com/contact" class="cta-button">Nous Contacter</a>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Le Labo Design. Tous droits réservés.</p>
+            <p><a href="https://lelabodesign.com/terms">Conditions de Service</a> | <a href="https://lelabodesign.com/privacy">Politique de Confidentialité</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>
