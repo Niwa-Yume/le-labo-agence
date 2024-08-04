@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <title>Le Labo Design - Expériences Numériques</title>
   <style>
-    body, html {
+    body,
+    html {
       margin: 0;
       padding: 0;
       font-family: 'Courier New', monospace;
@@ -14,11 +16,13 @@
       scroll-behavior: smooth;
       height: 100%;
     }
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
     }
+
     header {
       background-color: #2c2c2c;
       color: #f4f1e8;
@@ -28,32 +32,36 @@
       top: 0;
       z-index: 1000;
     }
+
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+
     .logo {
       font-size: 1.5em;
       font-weight: bold;
       letter-spacing: 2px;
     }
+
     .nav-links {
       list-style: none;
       display: flex;
       gap: 20px;
     }
+
     .nav-links a {
       color: #f4f1e8;
       text-decoration: none;
       transition: color 0.3s ease;
     }
+
     .nav-links a:hover {
       color: #d4d1c8;
     }
+
     .hero {
-      background: url('https://lelabodesign.com/images/hero-bg.jpg') no-repeat center center;
-      background-size: cover;
       height: 100vh;
       display: flex;
       align-items: center;
@@ -61,17 +69,68 @@
       text-align: center;
       color: #f4f1e8;
       margin-top: 60px;
+      position: relative;
+      overflow: hidden;
     }
+
     .hero-content {
       background-color: rgba(44, 44, 44, 0.7);
       padding: 40px;
       border-radius: 10px;
+      z-index: 2;
     }
+
+    .hero-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        opacity: 0.6;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0.6;
+      }
+    }
+
+    .pulsing {
+      animation: pulse 4s ease-in-out infinite;
+    }
+
     h1 {
       font-size: 3em;
       margin-bottom: 20px;
       font-weight: normal;
     }
+
     .cta-button {
       display: inline-block;
       background-color: #f4f1e8;
@@ -82,50 +141,65 @@
       font-size: 1.1em;
       transition: background-color 0.3s ease;
     }
+
     .cta-button:hover {
       background-color: #d4d1c8;
     }
-    .services, .about, .testimonials {
+
+    .services,
+    .about,
+    .testimonials {
       padding: 80px 0;
       text-align: center;
     }
-    .service-grid, .testimonial-grid {
+
+    .service-grid,
+    .testimonial-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
       margin-top: 40px;
     }
-    .service-card, .testimonial-card {
+
+    .service-card,
+    .testimonial-card {
       background-color: #fff;
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
     }
-    .service-card:hover, .testimonial-card:hover {
+
+    .service-card:hover,
+    .testimonial-card:hover {
       transform: translateY(-10px);
     }
+
     .about {
       background-color: #2c2c2c;
       color: #f4f1e8;
     }
+
     .contact {
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 50vh; /* Reduced height */
+      height: 50vh;
       flex-direction: column;
-      padding: 40px 0; /* Reduced padding */
+      padding: 40px 0;
     }
+
     .contact .container {
       text-align: center;
     }
+
     footer {
       background-color: #2c2c2c;
       color: #f4f1e8;
       text-align: center;
       padding: 20px 0;
     }
+
     footer a {
       color: #f4f1e8;
       text-decoration: none;
@@ -133,6 +207,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="container">
@@ -152,15 +227,104 @@
     <section class="hero">
       <div class="hero-content">
         <h1>Créez des Expériences Numériques</h1>
-        <p>Comme un parfum unique, nous concevons des solutions digitales qui captivent et laissent une impression durable.</p>
+        <p>Comme un parfum unique, nous concevons des solutions digitales qui captivent et laissent une impression
+          durable.</p>
         <a href="./contact/index.html" class="cta-button">Commencez Votre Voyage Sensoriel</a>
       </div>
+      <svg class="hero-image" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- Background -->
+        <rect width="100%" height="100%" fill="#f4f1e8" />
+
+        <!-- Central perfume bottle (representing the fusion of artisanal and tech) -->
+        <g class="floating" style="animation-delay: -2s;">
+          <path d="M450,300 Q500,250 550,300 L550,600 Q500,650 450,600 Z" fill="none" stroke="#333" stroke-width="4" />
+          <rect x="470" y="250" width="60" height="50" rx="5" fill="#333" />
+          <text x="500" y="500" font-family="Roboto Mono" font-size="24" fill="#333"
+            text-anchor="middle">&lt;/&gt;</text>
+        </g>
+
+        <!-- Web Development (represented by a beaker with code) -->
+        <g class="floating" style="animation-delay: -1s;">
+          <path d="M100,400 L150,400 170,550 80,550 Z" fill="none" stroke="#333" stroke-width="2" />
+          <text x="125" y="500" font-family="Roboto Mono" font-size="14" fill="#333" text-anchor="middle">{CSS}</text>
+        </g>
+
+        <!-- App Creation (represented by a smartphone-shaped flask) -->
+        <g class="floating" style="animation-delay: -3s;">
+          <rect x="780" y="400" width="60" height="100" rx="10" fill="none" stroke="#333" stroke-width="2" />
+          <circle cx="810" cy="485" r="8" fill="#333" />
+        </g>
+
+        <!-- Chatbot (represented by a dialogue bubble-shaped container) -->
+        <g class="floating" style="animation-delay: -2.5s;">
+          <path
+            d="M100,250 Q70,250 70,280 L70,320 Q70,350 100,350 L140,350 L160,370 L160,350 L180,350 Q210,350 210,320 L210,280 Q210,250 180,250 Z"
+            fill="none" stroke="#333" stroke-width="2" />
+          <text x="140" y="310" font-family="Roboto Mono" font-size="14" fill="#333" text-anchor="middle">AI Chat</text>
+        </g>
+
+        <!-- AI (represented by a brain-shaped vessel) -->
+        <g class="floating pulsing" style="animation-delay: -1.5s;">
+          <path
+            d="M800,250 C850,200 900,250 850,300 C900,350 850,400 800,350 C750,400 700,350 750,300 C700,250 750,200 800,250 Z"
+            fill="none" stroke="#333" stroke-width="2" />
+        </g>
+
+        <!-- Design (represented by a color palette-shaped container) -->
+        <g class="floating" style="animation-delay: -3.5s;">
+          <path d="M300,200 A50,50 0 0,1 350,150 A50,50 0 0,1 400,200 A50,50 0 0,1 350,250 A50,50 0 0,1 300,200 Z"
+            fill="none" stroke="#333" stroke-width="2" />
+          <circle cx="325" cy="175" r="10" fill="#333" />
+          <circle cx="375" cy="175" r="10" fill="#555" />
+          <circle cx="325" cy="225" r="10" fill="#777" />
+          <circle cx="375" cy="225" r="10" fill="#999" />
+        </g>
+
+        <!-- Cybersecurity (represented by a lock-shaped flask) -->
+        <g class="floating" style="animation-delay: -4s;">
+          <path d="M650,550 L750,550 750,650 650,650 Z" fill="none" stroke="#333" stroke-width="2" />
+          <circle cx="700" cy="570" r="15" fill="none" stroke="#333" stroke-width="2" />
+          <rect x="690" y="585" width="20" height="30" rx="5" fill="#333" />
+        </g>
+
+        <!-- Data Management (represented by a database-shaped container) -->
+        <g class="floating" style="animation-delay: -2s;">
+          <path d="M400,600 Q500,550 600,600 L600,650 Q500,700 400,650 Z" fill="none" stroke="#333" stroke-width="2" />
+          <path d="M400,600 Q500,650 600,600" fill="none" stroke="#333" stroke-width="2" />
+        </g>
+
+        <!-- Connecting tubes (representing scent molecules) -->
+        <g class="pulsing">
+          <path d="M160,400 C300,350 400,450 430,400" fill="none" stroke="#333" stroke-width="1" />
+          <path d="M780,450 C700,500 600,350 570,400" fill="none" stroke="#333" stroke-width="1" />
+          <path d="M170,350 C300,400 400,300 430,400" fill="none" stroke="#333" stroke-width="1" />
+          <path d="M800,300 C700,350 600,250 570,400" fill="none" stroke="#333" stroke-width="1" />
+          <path d="M350,250 C400,300 450,350 470,400" fill="none" stroke="#333" stroke-width="1" />
+          <path d="M700,550 C650,500 550,450 530,420" fill="none" stroke="#333" stroke-width="1" />
+          <path d="M500,600 C500,550 500,500 500,470" fill="none" stroke="#333" stroke-width="1" />
+        </g>
+
+        <!-- Scent particles -->
+        <g class="pulsing">
+          <circle cx="300" cy="380" r="3" fill="#333" />
+          <circle cx="450" cy="280" r="3" fill="#333" />
+          <circle cx="650" cy="320" r="3" fill="#333" />
+          <circle cx="720" cy="500" r="3" fill="#333" />
+          <circle cx="250" cy="550" r="3" fill="#333" />
+          <circle cx="550" cy="600" r="3" fill="#333" />
+        </g>
+
+
+      </svg>
     </section>
 
     <section id="about" class="about">
       <div class="container">
         <h2>Notre Essence</h2>
-        <p>Le Labo Design est né de la passion de créer des expériences digitales aussi riches et mémorables qu'un parfum de luxe. Notre équipe d'artisans numériques combine expertise technique et sensibilité artistique pour donner vie à des créations uniques qui captivent, engagent et inspirent.</p>
+        <p>Le Labo Design est né de la passion de créer des expériences digitales aussi riches et mémorables qu'un
+          parfum de luxe. Notre équipe d'artisans numériques combine expertise technique et sensibilité artistique pour
+          donner vie à des créations uniques qui captivent, engagent et inspirent.</p>
       </div>
     </section>
 
@@ -169,11 +333,13 @@
         <h2>Ce Que Disent Nos Clients</h2>
         <div class="testimonial-grid">
           <div class="testimonial-card">
-            <p>"Le Labo Design a transformé notre présence en ligne en une expérience sensorielle captivante. Leur approche unique a véritablement capturé l'essence de notre marque."</p>
+            <p>"Le Labo Design a transformé notre présence en ligne en une expérience sensorielle captivante. Leur
+              approche unique a véritablement capturé l'essence de notre marque."</p>
             <p><strong>- Sophie L., Fondatrice de Maison de Parfum Élégance</strong></p>
           </div>
           <div class="testimonial-card">
-            <p>"L'équipe du Labo Design a créé pour nous une application mobile qui engage tous les sens. C'est bien plus qu'un outil, c'est une extension de notre identité."</p>
+            <p>"L'équipe du Labo Design a créé pour nous une application mobile qui engage tous les sens. C'est bien
+              plus qu'un outil, c'est une extension de notre identité."</p>
             <p><strong>- Marc D., Directeur Marketing chez TechSense</strong></p>
           </div>
         </div>
@@ -196,4 +362,5 @@
     </div>
   </footer>
 </body>
+
 </html>
